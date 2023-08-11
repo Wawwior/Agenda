@@ -1,34 +1,35 @@
 {
 	"schema_version": 1,
 	"quilt_loader": {
-		"group": "com.example",
-		"id": "example_mod",
+		"group": "me.wawwior",
+		"id": "agenda",
 		"version": "${version}",
 		"metadata": {
-			"name": "Mod Name",
-			"description": "A short description of your mod.",
+			"name": "Agenda",
+			"description": "Quilt Library Mod",
 			"contributors": {
-				"Your name here": "Owner"
+				"Wawwior": "Author"
 			},
 			"contact": {
-				"homepage": "https://example.com/",
-				"issues": "https://github.com/QuiltMC/quilt-template-mod/issues",
-				"sources": "https://github.com/QuiltMC/quilt-template-mod"
+				"homepage": "https://wawwior.me/",
+				"issues": "https://github.com/Wawwior/Agenda/issues",
+				"sources": "https://github.com/Wawwior/Agenda"
 			},
-			"icon": "assets/example_mod/icon.png"
+			"icon": "assets/agenda/icon.png",
+			"license": "MIT"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "com.example.example_mod.ExampleMod"
+			"init": "me.wawwior.agenda.Agenda"
 		},
 		"depends": [
 			{
 				"id": "quilt_loader",
-				"versions": ">=0.19.1"
+				"versions": ">=0.20.0"
 			},
 			{
 				"id": "quilted_fabric_api",
-				"versions": ">=7.0.2"
+				"versions": ">=7.1.1"
 			},
 			{
 				"id": "minecraft",
@@ -36,5 +37,5 @@
 			}
 		]
 	},
-	"mixin": "example_mod.mixins.json"
+	"mixin": "agenda.mixins.json"
 }
