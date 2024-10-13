@@ -1,10 +1,10 @@
 plugins {
 	id 'maven-publish'
-	id "org.quiltmc.loom" version "1.2.+"
+	id 'org.quiltmc.loom' version "${quilt_loom}"
 }
 
 base.archivesName = archives_base_name
-version = "$version+${minecraft_version}"
+version = "$version+${minecraft}"
 group = maven_group
 
 repositories {
@@ -13,14 +13,12 @@ repositories {
 // All the dependencies are declared at gradle/libs.version.toml and referenced with "libs.<id>"
 // See https://docs.gradle.org/current/userguide/platforms.html for information on how version catalogs work.
 dependencies {
-	minecraft "com.mojang:minecraft:${minecraft_version}"
-	mappings "org.quiltmc:quilt-mappings:${minecraft_version}+build.${quilt_mappings}:intermediary-v2"
+	minecraft "com.mojang:minecraft:${minecraft}"
+	mappings "org.quiltmc:quilt-mappings:${minecraft}+build.${quilt_mappings_build}:intermediary-v2"
 
-	modImplementation "org.quiltmc:quilt-loader:${loader_version}"
+	modImplementation "org.quiltmc:quilt-loader:${quilt_loader}"
 
-	modImplementation "org.quiltmc:qsl:${qsl_version}+${minecraft_version}"
-
-	modImplementation "org.quiltmc.quilted-fabric-api:quilted-fabric-api:${quilted_fabric_api_version}-${minecraft_version}"
+	modImplementation "org.quiltmc.quilted-fabric-api:quilted-fabric-api:${quilted_fabric_api}-${minecraft}"
 }
 
 processResources {
